@@ -1,0 +1,395 @@
+body {
+    background-color: #E5E6EE;
+    /*background-image: url("Bird of Paradise - Main.png");*/
+    background-size: cover;
+    background-size: contain;
+    width: calc(100vw - 4.3vw - 6.3vw);
+    margin: 0;
+    padding: 3.73vh 4.3vw 0 6.3vw;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg-img-right {
+    position: absolute;
+    top: 32vh;
+    right: -10.8vw;
+    z-index: -1;
+}
+
+.bg-img-right svg {
+    width: 30.08vw;
+}
+
+.bg-img-bottom {
+    position: absolute;
+    bottom: -10.49vh;
+    left: 13.5vw;
+    z-index: -1;
+}
+
+.bg-img-bottom svg {
+    width: 18vw;
+}
+
+.button {
+    background: #E5E6EE;
+    border: 0;
+    cursor: pointer;
+    color: #707070;
+    text-transform: uppercase;
+    height: 3.2vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.18vw;
+    font-weight: 300;
+    padding: 0 1.3vw;
+    border-radius: 2.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 0;
+}
+
+.button--fake {
+    cursor: initial;
+}
+
+.button--previous {
+    margin-left: auto;
+    margin-right: 12.27vw;
+}
+
+.button--next {
+    margin-left: 12.27vw;
+}
+
+.button--previous svg,
+.button--next svg {
+    width: 1.74vw;
+}
+
+.button--rounded {
+    border-radius: 50%;
+    width: 4.3vw;
+    height: 4.3vw;
+    padding: 0;
+}
+
+.button--green {
+    background: #92AC78;
+    color: white;
+    padding: 0 2.5vw;
+}
+
+.button-qty {
+    align-items: center;
+    background: #E5E6EE;
+    border: 0.075vw solid #92AC78;
+    border-radius: 50%;
+    color: #92AC78;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.2vw;
+    height: 1.34vw;
+    justify-content: center;
+    margin: 0 0.74vw;
+    padding: 0;
+    position: relative;
+    width: 1.34vw;
+    outline: 0;
+}
+
+.button-qty::before {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -0.076vw;
+    bottom: 0;
+}
+
+.button-qty--minus::before {
+    content: '－';
+}
+
+.button-qty--plus::before {
+    content: '＋';
+}
+
+.button-qty:hover {
+    color: #707070;
+    border-color: #707070;
+    transition: all .2s linear;
+}
+
+.button-qty:last-child {
+    margin-right: 0;
+}
+
+.neo-shadow {
+    box-shadow: -6px -6px 10px #FFFFFF80, 6px 6px 10px #00000033;
+}
+
+.neo-shadow--green {
+    box-shadow: -6px -6px 10px #FFFFFF80, 6px 6px 10px #324d2e26;
+}
+
+.button.neo-shadow--green:hover {
+    box-shadow: -4px -4px 6px #a9be94 inset, 4px 4px 6px #324d2e26 inset;
+    color: #324d2f;
+    transition: color .1s linear;
+}
+
+.button:not(.button--fake):not(.product__tab).neo-shadow:hover,
+.product__tab:not(.button):hover {
+    box-shadow: -3px -3px 10px #FFFFFF80 inset, 3px 3px 10px #00000033 inset;
+}
+
+.logo {
+    display: block;
+    left: 6.36vw;
+    position: absolute;
+    top: 3.91vh;
+}
+
+.logo svg {
+    height: 7.06vw;
+    width: 5.68vw;
+}
+
+.nav {
+    position: absolute;
+    top: 9.24vh;
+    right: 5.2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__item svg {
+    width: 1.24vw;
+}
+
+.nav__item--cart svg {
+    margin-left: 0.4vw;
+    margin-top: -0.4vw;
+    width: 1.68vw;
+}
+
+.nav__item.button--rounded {
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+.nav__item.button--rounded:not(:last-child) {
+    margin-bottom: 1.2vw;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+.controls .button--green {
+    margin-left: 1.68vw;
+}
+
+.content {
+    display: flex;
+    margin-bottom: 3.2vh;
+}
+
+.gallery-container {
+    padding: 19.55vh 0 0 3.6vw;
+    width: calc(36.65vw - 3.6vw);
+}
+
+.gallery {
+    display: flex;
+}
+
+.gallery__nav {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0.85vw 3.5vw 0 0;
+}
+
+.gallery__nav-next,
+.gallery__nav-previous {
+    cursor: pointer;
+    height: 1vw;
+    position: relative;
+    width: 2vw;
+}
+
+.gallery__nav-next span,
+.gallery__nav-previous span {
+    background: #707070;
+    display: block;
+    height: 0.15vw;
+    position: absolute;
+    top: 0.4vw;
+    width: 1.2vw;
+}
+
+.gallery__nav-next span:first-child,
+.gallery__nav-previous span:last-child {
+    transform: rotate(-45deg);
+}
+
+.gallery__nav-next span:last-child,
+.gallery__nav-previous span:first-child {
+    transform: rotate(45deg);
+}
+
+.gallery__nav-next span:last-child,
+.gallery__nav-previous span:last-child {
+    left: 0.75vw;
+}
+
+.gallery__nav-items {
+    margin: 1.78vh 0;
+}
+
+.gallery__nav-item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    height: 14.26vh;
+    margin-bottom: 3.02vh;
+    width: 5.99vw;
+}
+
+.gallery__nav-item:last-child {
+    margin-bottom: 0;
+}
+
+.gallery__main-image-container {
+    background: #E5E6EE;
+    border-radius: 1.2vw;
+    height: 57.79vh;
+    position: relative;
+    width: 22.51vw;
+    z-index: -1;
+}
+
+.gallery__main-image {
+
+}
+
+.gallery__main-image--no-boundaries {
+    position: absolute;
+    right: -8.2vw;
+    top: -13.15vh;
+    max-height: 77.3vh;
+    max-width: 43.49vw;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    padding: 8.89vh 6vw 0 9.5vw;
+    width: calc(45.82vw - 6vw - 9.5vw);
+}
+
+.product__name {
+    color: #324D2E;
+    font-family: Cormorant Garamond;
+    font-size: 11.25vh;
+    font-weight: normal;
+    line-height: 9.47vh;
+    margin: 0 0 2.76vh;
+    text-shadow: 15px 12px 10px rgba(147, 191, 141, .25);
+}
+
+.product__main-name-part {
+    left: -10vw;
+    position: relative;
+}
+
+.product__subname {
+    font-size: 2.64vh;
+    margin-bottom: 3.91vh;
+    padding-left: 0.6vw;
+    color: #999A98;
+}
+
+.product__properties {
+    display: flex;
+    margin-bottom: 4.8vh;
+    padding-left: 0.8vw;
+}
+
+.product__property {
+    margin-right: 2.3vw;
+    text-align: center;
+}
+
+.product__property:last-child {
+    margin-right: 0;
+}
+
+.property__icon {
+    margin-bottom: 0.18vh;
+}
+
+.property__name {
+    color: #999A98;
+    font-size: 0.7vw;
+}
+
+.product__tabs {
+    align-items: center;
+    display: flex;
+    margin-bottom: 1.96vh;
+    padding-left: 0.6vw;
+}
+
+.product__tabs-content {
+    color: #707070;
+    padding-left: .7vw;
+    line-height: 1.24vw;
+    font-size: 0.75vw;
+    margin-bottom: 2.49vh;
+}
+
+.product__tab {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.78vh;
+    height: 4.09vh;
+    margin-right: 0.75vw;
+    padding: 0 1.1vw;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    align-items: center;
+}
+
+.product__tab svg {
+    margin-left: 1vw;
+}
+.product__tab.button {
+    cursor: initial;
+}
+
+.product__tab:not(.button) {
+    background: none;
+    border: 0;
+    border-radius: 2.2vw;
+    color: #92AC78;
+}
+
+.product__price {
+    font-size: 3.91vh;
+    color: #92AC78;
+    font-weight: 500;
+    padding-left: .8vw;
+    letter-spacing: .07vw;
+}
